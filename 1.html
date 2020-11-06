@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="alert('welcome')">
+
+<div id="result" style="width: 200px; border: 1px solid black">
+    Kết quả hiện ở đây
+</div>
+
+<button onclick="display()">Hiện</button>
+
+<a href="http://vnexpress.net" target="_blank" onclick="return(confirm('bạn thực sự muốn mở trang nay không'))">
+    <p>VN express</p></a>
+
+<button onclick="return openWeb(prompt('Nhập địa chỉ trang web cần mở'))">Mở trang web</button>
+
+<script>
+    function openWeb(st){
+        if (confirm('bạn thực sự muốn mở trang nay không'))
+        window.open(st);
+        return false
+    }
+    function display(){
+        let tmp;
+        tmp=prompt('Nhập vào đây');
+        document.getElementById('result').innerText=tmp;
+    }
+</script>
+</body>
+</html>
